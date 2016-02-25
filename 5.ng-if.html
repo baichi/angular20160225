@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="zfpxMod">
+<html lang="en" ng-app="zfpxMod">$rootScope
 <head>
     <meta charset="UTF-8">
     <title>学习angular.js</title>
 </head>
-<body>
+<body ng-controller="ZfpxCtrl">
 <!-- 这就是我们的视图，其实就是DOM元素 -->
-<button ng-click="show = !show">切换</button>
-<div ng-show="show">ng-show</div>
-<div ng-hide="show">ng-hide</div>
+<button ng-click="change()">切换</button>
+<div ng-show="s">ng-show</div>
 </body>
 <!-- 引入anular.js-->
 <script src="angular.js"></script>
@@ -26,7 +25,9 @@
     //依赖注入
     angular.module('zfpxMod').controller('ZfpxCtrl',function($scope){
         //给模型$scope添加一个自定义属性，值是zfpx
-        $scope.name = 'zfpx';
+        $scope.change = function(){
+             $scope.s=!$scope.s;
+        }
     });
 </script>
 </html>
