@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="zfpxMod">
+<head>
+    <meta charset="UTF-8">
+    <title>学习angular.js</title>
+</head>
+<body>
+<!-- 这就是我们的视图，其实就是DOM元素 -->
+<div style="color:red" ng-controller="ZfpxCtrl">
+    <span ng-bind="name"></span>
+</div>
+</body>
+<!-- 引入anular.js-->
+<script src="angular.js"></script>
+<script>
+    //二个参数表示定义一个模块，第一个参数是模块的名字，第二个参数是它依赖的其它模块
+    //一个参数表示获取一个模块
+    //如果ng-app的值等于zfpxMod,那么这个模块就是一个启动模块
+    angular.module('zfpxMod',[]);
+    //获取到模块后可以调用它的controller方法定义控制
+    //第一个参数是控制器的名称，第二个参数是控制器的定义，就是一个普通函数
+    // C controller
+    //$scope 是一个普通的对象 {},它是当创建控制器的时候买一送一送来的，
+    // 由angular创建，自动注入进来
+    //$scope注是我们的模型
+    //依赖注入
+    angular.module('zfpxMod').controller('ZfpxCtrl',function($scope){
+        //给模型$scope添加一个自定义属性，值是zfpx
+        $scope.name = 'zfpx';
+    });
+</script>
+</html>

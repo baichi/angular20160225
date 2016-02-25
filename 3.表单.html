@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="zfpxMod">
-$rootScope.age
+
 <!-- 当指定了ng-app之后，angular会自动创建一个$rootScope -->
 <head>
     <meta charset="UTF-8">
     <title>学习angular.js</title>
 </head>
 <body ng-controller="ZfpxCtrl">
-
-<input type="text" ng-model="age">
-<!-- 那么所有的表达式取属性的时候会自动从$rootScope上进行取值 -->
-{{age}}
+姓名:<input type="text" ng-model="user.name">
+年龄:<input type="text" ng-model="user.age">
+<button ng-click="add()">提交</button>
+<button ng-click="clear()">清空</button>
 </body>
 
 <script src="angular.js"></script>
@@ -18,7 +18,13 @@ $rootScope.age
     angular.module('zfpxMod',[]);
     angular.module('zfpxMod').controller('ZfpxCtrl',function($scope){
         //给模型$scope添加一个自定义属性，值是zfpx
-        $scope.age = '88';
+        $scope.user = {};
+        $scope.add = function(){
+            console.log($scope.user);
+        }
+        $scope.clear = function(){
+            delete $scope.user;
+        }
     });
 </script>
 </html>
