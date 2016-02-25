@@ -8,6 +8,7 @@
 <!-- 这就是我们的视图，其实就是DOM元素 -->
 <div style="color:red" ng-controller="ZfpxCtrl">
  {{name}}
+ {{getName()}}
 </div>
 </body>
 <!-- 引入anular.js-->
@@ -27,6 +28,9 @@
     angular.module('zfpxMod').controller('ZfpxCtrl',function($scope){
         //给模型$scope添加一个自定义属性，值是zfpx
         $scope.name = 'zfpx';
+        $scope.getName = function(){
+            alert('zfpx');
+        }
     });
 </script>
 </html>
