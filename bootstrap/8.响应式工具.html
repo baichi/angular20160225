@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+    <meta charset="UTF-8">
+    <title>学习bootstrap</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 alert alert-danger">
+            <!-- xs 小于768像素-->
+           <p class="visible-xs">小于768px手机屏幕时显示</p>
+        </div>
+        <div class="col-md-6 alert alert-success">
+            <p class="hidden-xs">大于768px屏幕宽度时显示</p>
+        </div>
+    </div>
+
+</div>
+<script src="//cdn.bootcss.com/jquery/2.1.2/jquery.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.js"></script>
+</body>
+</html>

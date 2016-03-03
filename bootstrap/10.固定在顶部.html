@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+    <meta charset="UTF-8">
+    <title>学习bootstrap</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <style>
+        .alert-info{
+            color:red;
+        }
+
+    </style>
+</head>
+<body style="margin-top: 70px">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <a href="#" class="navbar-brand"><strong>珠峰培训</strong></a>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="">Javascript</a></li>
+            <li><a href="">HTML5</a></li>
+            <li><a href="">NODE.JS</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container" style="height:1500px;">
+    <p class="alert alert-info">
+        当浏览器视口（viewport）的宽度小于 @grid-float-breakpoint 值时，导航条内部的元素变为折叠排列，也就是变现为移动设备展现模式；当浏览器视口（viewport）的宽度大于 @grid-float-breakpoint 值时，导航条内部的元素变为水平排列，也就是变现为非移动设备展现模式。通过调整源码中的这个值，就可以控制导航条何时堆叠排列，何时水平排列。默认值是 768px （小屏幕 -- 或者说是平板 --的最小值，或者说是平板）。
+    </p>
+</div>
+<script src="//cdn.bootcss.com/jquery/2.1.2/jquery.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
